@@ -1,14 +1,13 @@
 import math
 
-x = "foo"
-y = "foo"
-
 
 def search(lst, T):
     L = 0
     R = len(lst) - 1
     while L < R:
         m = math.floor((L + R) / 2)
+        if lst[L] == T:
+            return L
         L, R = update_interval(lst, m, T, L, R)
     if lst[L] == T:
         return L
@@ -21,16 +20,3 @@ def update_interval(lst, m, T, L, R):
     else:
         R = m - 1
     return L, R
-
-
-def search_fix(lst, T):
-    L = 0
-    R = len(lst) - 1
-    while L < R:
-        m = math.floor((L + R) / 2)
-        if lst[L] == T:
-            return L
-        L, R = update_interval(lst, m, T, L, R)
-    if lst[L] == T:
-        return L
-    return -1
