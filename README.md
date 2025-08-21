@@ -1,3 +1,3 @@
 # newton-practice
 A test repository of Newton's method...
-Written by Chris Paciorek 2025-08-20.
+Written by Christopher Paciorek 2025-08-22.
